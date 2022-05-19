@@ -1,3 +1,8 @@
+// La Pioggia, Franco 
+// Legajo 88206/0
+// Tp n° 1
+// Créditos película "Up"
+
 PImage nube1, nube2, logo, carl, soga, casa, russel, dug, kevin,michael,docter, reiniciar,personajes;
 PFont fuente;
 float px,py,px2, posy, pxb, pyb,  ancho,  alto;

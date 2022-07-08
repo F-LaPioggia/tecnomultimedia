@@ -6,7 +6,7 @@ void miNave() {
   text ("PUNTOS:"+puntos, width/2, 50);
   text ("/250", width/2+75, 50);
   fill (0, 255, 255);
-  rect (px, by, 30, 3, 20);
+  rect (px, pInicialY, 30, 3, 20);
   image (miNave, 100, py);
   noFill();
   rect (100, py, 50, 50);
@@ -30,6 +30,7 @@ void miNave() {
     
   } else {
     px = 100;
+    pInicialY = py;
     disparos.play();
   }
 }

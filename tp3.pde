@@ -1,5 +1,10 @@
-import processing.sound.*;
+// Franco La Pioggia
+// Comisión 1
+// Legajo 88206/0
+// Tp 3: Videojuego
+// URL del video: https://youtu.be/TyY59BDmyEc
 
+import processing.sound.*;
 PImage fondo, enemigo, miNave, perdiste;
 SoundFile disparos;
 PFont titulos, texto;
@@ -10,8 +15,10 @@ float by=  200;
 float ty = height-10;
 int vidas = 5;
 int puntos = 0;
+float pInicialY = 100;
 float [] dx = new float [cant];
 float [] dy = new float [cant];
+float [] bEnemigosY = new float [cant];
 float [] ubicY = new float [cant];
 float [] ubicX = new float [cant];
 float [] tam = new float [cant];
@@ -48,9 +55,8 @@ void setup () {
     tam [i] = random (50, 60);
     direc [i] = random (1, 3); 
     vel [i] += direc [i];
-    seDisparo [i] = false;
+    seDisparo [i] = true;
   }
-
   //--------------ENEMIGO---------------------
 
 }

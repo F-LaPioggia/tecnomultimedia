@@ -1,14 +1,15 @@
 class Movimiento{ //superClase
-  float px, py;
-  float direc;
-  Movimiento (float px, float py, float direc){
+  int px, py;
+  int direc;
+  Movimiento (int px, int py, int direc){
     this.px = px;
     this.py = py;
     this.direc = direc;
+    
   }
   
-  void desplazamiento (){
-    if (px > width-50 || px <= 0){
+  void desplazamiento (int minim, int max){
+    if (px > max || px <= minim){
       direc *= -1; 
     } 
     px += direc;

@@ -1,11 +1,11 @@
 // Alumno: La Pioggia, Franco.
 // Legajo: 88206/0
 // Comisión: 1
-// tp 4
-// Url al video:  https://youtu.be/5JIZ7Sq8ag8
+// tp 5
+// Url al video:  
 Master m;
 void setup (){
-  size (600,650);
+  size (650,550);
   m = new Master ();
 
 }

@@ -15,8 +15,6 @@ class Fondo {
 
   void dibujarFondo() {
     image (fondo, 0, 0);
-    fill (0);
-    text ("DESPLAZATE CON LAS FLECHITAS ▲ ▼ ► ◄",width/2,50);
   }
   
   

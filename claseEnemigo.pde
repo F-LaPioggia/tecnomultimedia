@@ -1,19 +1,21 @@
-class Enemigo extends Movimiento{
-  PImage [] enemigo;
-  float tam;
-  Enemigo (float px, float py, float direc){
-    super (px,py,direc);
-    enemigo = new PImage [3];
+class Enemigo extends Movimiento {
+  PImage  enemigo;
+  int tam, inicia, termina;
+
+  Enemigo (int px, int py, int direc,int minim, int max) {
+    super (px, py, direc);
+    enemigo = loadImage ("enemigo.png");
     tam=50;
-    for (int i =0; i<3; i++){
-    enemigo [i] = loadImage ("enemigo.png");
-    }
+    inicia = minim;
+    termina = max;
+    
+  }
+
+  void dibujarEnemigo() {
+    image  (enemigo, px, py, tam, tam); //primer enemigo
+    // preguntar cómo darle diferentes direcciones
+    desplazamiento(inicia,termina);
   }
   
-  void dibujarEnemigo(){
-    image  (enemigo[0], px, py,tam,tam); //primer enemigo
-    image  (enemigo[1], px, py+320,tam,tam); // 2do enemigo 
-    // preguntar cómo darle diferentes direcciones
-    desplazamiento();
-  }
+   
 }

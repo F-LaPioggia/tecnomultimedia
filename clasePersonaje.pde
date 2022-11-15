@@ -1,25 +1,32 @@
 class Personaje {
 
-  int ux, uy,tamaX;
+  int ux, uy,tamaX,ubic;
   PImage [] movI;
   PImage [] movD;
-  int mover;
-  boolean direccion;
+  PImage vidas, pizza,pizza1;
+  int mover, vida;
+  boolean direccion,puedeCaer;
   
   Personaje (){
+    
+    vidas = loadImage ("vida.png");
+    pizza = loadImage ("pizza1.png");
+    pizza1 = loadImage ("pizza1.png");
     movI = new PImage [7];
     movD = new PImage [7];
     
+    vida = 3;
     for (int i = 0; i<7; i ++){
       
       movI [i] = loadImage ("personajeInv" +i+ ".png");
       movD [i] = loadImage ("personaje"+i+".png");
     }
     
-    ux = 50;
-    uy = 40;
+    ux = width/2;
+    uy = 0;
     tamaX =50;  
     direccion = true;
+    puedeCaer = true;
   }
   
     void dibujarPersonaje(){
@@ -28,38 +35,46 @@ class Personaje {
      image (movI[mover], ux, uy); 
      } else {   
          image (movD[mover],ux, uy);
-       }
-       
-      
+       }     
   }
-    
+    void mover(){
+      if (puedeCaer){
+        uy += 7;
+      }
+      uy = uy>height? 0: uy;
+    }
     void moverPersonaje(int tecla){
       
       if (frameCount%4== 0){ //velocidad de mov.
-        if (ux>0 && tecla == LEFT ){
+        if (tecla == LEFT ){
           ux -=10;
           direccion = true;
         }
-        if (ux<width-50 && tecla == RIGHT){
+        if (tecla == RIGHT){
           ux +=10;
           direccion = false;
         }
-        if (uy<height-110 && tecla == DOWN){
-          uy +=15;
-          
-        }
-        if (uy>45 && tecla == UP){
-          uy -=15;
-        }
+        
        
         mover ++;
         mover = mover%7;
+        
+        
+        
+        if (ux < -50){
+          ux = width+10;
+        }
+        if (ux> width+10){
+          ux = -50;
+        }
       }
+      
     }
-    void reboteArriba() {
-    uy += 10;
-  }
-  void reboteAbajo() {
-    uy -= 10;
-  }
+    
+    void vidas (int px, int py){
+      image (vidas, px, py);   
+    }
+    void pizza (int px, int py){
+      image (pizza, px,py);
+    }
 }

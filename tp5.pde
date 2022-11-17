@@ -20,3 +20,8 @@ void draw (){
   }
   
 }
+
+void mousePressed(){
+ m.accionarBotones();
+
+}

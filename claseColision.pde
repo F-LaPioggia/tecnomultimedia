@@ -10,6 +10,7 @@ class Colision {
   }
   void dibujarColision(){
     noStroke();
+    noFill();
     rect (px,py,tamX,tamY);   
   }
   

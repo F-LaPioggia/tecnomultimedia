@@ -1,18 +1,18 @@
-
 // Alumno: La Pioggia, Franco.
 // Legajo: 88206/0
 // Comisión: 1
 // tp 5
-// Url al video:  
+// Url al video: https://youtu.be/L0QHpJYIwN0 
 
 import processing.sound.*;
-
 SoundFile fondo, golpe, comiendo;
 
 Master m;
-void setup (){
-  size (650,550);
+void setup () {
+  size (650, 550);
   m = new Master ();
+
+  //Cargamos Sonidos
   fondo =    new SoundFile  (this, "fondo.wav");
   golpe =    new SoundFile  (this, "golpe.wav");
   comiendo = new SoundFile  (this, "comiendo.wav");
@@ -20,15 +20,14 @@ void setup (){
   fondo.loop();
 }
 
-void draw (){
+void draw () {
   m.dibujarMaster(); 
- if (keyPressed) {
+
+  if (keyPressed) {
     m.movimiento ();
   }
-  
 }
 
-void mousePressed(){
- m.accionarBotones();
-
+void mousePressed() {
+  m.accionarBotones();
 }

@@ -8,15 +8,11 @@ class Fondo {
     tam = 600;
     fondo = loadImage ("fondo.jpg");
     textAlign(CENTER);
-      textSize (20);
+    textSize (20);
+  }
 
-    }
-  
 
   void dibujarFondo() {
     image (fondo, 0, 0);
   }
-  
-  
-  
 }

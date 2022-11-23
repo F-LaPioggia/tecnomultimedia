@@ -1,5 +1,5 @@
 class Boton {
-  int bx, by, ancho, alto,tam; //ubicacion y tamaño
+  int bx, by, ancho, alto, tam; //ubicacion y tamaño
   int actual, prox; // en que ventana estoy - a donde voy a ir
   String texto;
 
@@ -17,11 +17,11 @@ class Boton {
     this.prox = prox;
     this.texto = texto;
     this.tam= tam;
-    
-    fill (255,0,255,90);
-    stroke (255,0,255);
+
+    fill (255, 0, 255, 90);
+    stroke (255, 0, 255);
     strokeWeight(3);
-    rect (bx, by, ancho, alto,30);
+    rect (bx, by, ancho, alto, 30);
     fill (255);
     textSize (tam);
     text (texto, bx+ancho/2, by+alto/2);

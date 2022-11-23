@@ -37,17 +37,17 @@ class Personaje {
       image (movD[mover], ux, uy);
     }
   }
-  
+
   void mover() { 
     uy += 7;
     uy = uy>height? 0: uy;
-    }
-    
+  }
+
   void rebote() { 
     uy -= 7;
-   }
-    
-    
+  }
+
+
   void moverPersonaje(int tecla) {
 
     if (frameCount%4== 0) { //velocidad de mov.

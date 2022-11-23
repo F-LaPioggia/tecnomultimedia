@@ -36,7 +36,7 @@ class Master {
 
     //Ubicamos plataformas
     col[0] = new Colision (235, 145, 600, 30);
-    col[1] = new Colision (-50, 145, 155, 30);
+    col[1] = new Colision (-50, 145, 150, 30);
     col[2] = new Colision (-50, 275, 450, 30);
     col[3] = new Colision (550, 275, 150, 30);
     col[4] = new Colision (170, 410, 500, 30);
